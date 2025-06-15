@@ -88,31 +88,4 @@ char *get_next_line(int fd)
 	return (line);
 
 }
-#include <fcntl.h>
-#include <stdio.h>
 
-int main() {
-    int fd;
-    char *line;
-
-    fd = open("get_next_line.c", O_RDONLY);
-    if (fd == -1) {
-        perror("Error opening file");
-        return 1;
-    }
-	line = get_next_line(fd);
-	printf("--%s\n", line);
-    free(line);
-    line = NULL;
-	line = get_next_line(fd);
-	printf("--%s\n", line);
-    free(line);
-    line = NULL;
-	line = get_next_line(fd);
-	printf("--%s\n", line);
-    free(line);
-    line = NULL;
-
-    close(fd);
-    return 0;
-}

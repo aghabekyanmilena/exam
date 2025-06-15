@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: vkostand <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/08 13:08:48 by vkostand          #+#    #+#             */
-/*   Updated: 2024/07/08 14:20:56 by vkostand         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdio.h>
@@ -61,9 +49,4 @@ int ft_printf(const char *format, ... )
 	}
 	return (va_end(pointer), length);
 }
-/*
-int main()
-{
-	printf("%s %d %x\n", "abcd", 256, 17);
-	ft_printf("%s %d %x", "abcd", 256, 17);
-}*/
+
